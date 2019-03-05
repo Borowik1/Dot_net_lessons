@@ -6,7 +6,26 @@ namespace Task01
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            int a;
+            int b;
+            int s;
+
+            Console.Write("Введите высоту прямоугольника: ");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Введите ширину прямоугольника: ");
+            b = Convert.ToInt32(Console.ReadLine());
+
+            if (a <= 0 | b <= 0)
+            {
+                Console.WriteLine("ОШИБКА! Введённые данные некорректны");
+
+            }
+            else
+            {
+                s = a * b;
+                Console.WriteLine("Площадь прямоугольника = {0}", s.ToString());
+            }
+            Console.ReadLine();
         }
     }
 }
