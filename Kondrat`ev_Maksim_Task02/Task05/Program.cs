@@ -10,22 +10,18 @@ namespace Task05
     {
         static void Main(string[] args)
         {
-            int Summ=0;
+            int summ=0;
 
             for(int i = 1; i<= 1000; i++)
             {
-                if (i % 3 == 0)
+                if (i % 3 == 0|| i % 5 == 0)
                 {
-                    Summ += i;
+                    summ += i;
                 }
-                if (i % 5 == 0)
-                {
-                    Summ += i;
-                }
-                    
+                                   
             }
 
-            Console.Write("Сумма всех натуральных чисел, меньших 1000 и кратных трём и пяти: " + Summ);
+            Console.Write("Сумма всех натуральных чисел, меньших 1000 и кратных трём и пяти: " + summ);
             Console.ReadLine();
         }
     }

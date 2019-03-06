@@ -23,7 +23,7 @@ namespace Task01
             else
             {
                 s = a * b;
-                Console.WriteLine("Площадь прямоугольника = {0}", s.ToString());
+                Console.WriteLine($"Площадь прямоугольника = {s}");
             }
             Console.ReadLine();
         }

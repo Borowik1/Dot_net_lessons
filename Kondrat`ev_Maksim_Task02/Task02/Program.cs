@@ -10,23 +10,15 @@ namespace Task02
     {
         static void Main(string[] args)
         {
-            int N;
+            int n;
 
             Console.Write("Введите число строк: ");
-            N = Convert.ToInt32(Console.ReadLine());
+            n = Convert.ToInt32(Console.ReadLine());
 
-            for (int i = 1; i <= N; i++)
+            for (int i = 1; i <= n; i++)
             {
-               // for (int j = 1; j <= N - i; j++)
-               // {
-               //     Console.Write(" ");
-               // }
-
-                for (int k = 1; k <= i; k++)
-                {
-                    Console.Write("*");
-                }
-                Console.WriteLine();
+                var s = new string('*', i);          
+                Console.WriteLine(s);
             }
 
             Console.ReadLine();
