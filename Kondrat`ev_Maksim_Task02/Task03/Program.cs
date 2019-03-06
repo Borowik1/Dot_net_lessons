@@ -10,24 +10,16 @@ namespace Task03
     {
         static void Main(string[] args)
         {
-            int N;
+            int n;
             
-            Console.Write("Введите число строк пирамиды: ");
-            N = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Введите число строк пирамиды: ");            
+            n = Convert.ToInt32(Console.ReadLine());
             
-            for (int i=1; i <= N; i++)
-            {
-                for (int j=1; j <= N-i; j++)
+                for (int j=1; j <= n; j++)
                 {
-                    Console.Write(" ");
-                }
-
-                for (int k=1; k <= 1+(i-1)*2; k++)
-                {
-                    Console.Write("*");
-                }
-                Console.WriteLine();
-            }
+                    string s = new string('*', 1+(j-1)*2);
+                    Console.WriteLine(s.PadLeft (n + j - 1));                    
+                }             
 
             Console.ReadLine();
             

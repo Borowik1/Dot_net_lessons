@@ -10,27 +10,21 @@ namespace Task04
     {
         static void Main(string[] args)
         {
-            int N;
+            int n;
 
             Console.Write("Введите количество пирамид: ");
-            N = Convert.ToInt32(Console.ReadLine());
+            n = Convert.ToInt32(Console.ReadLine());
 
-            for (int l = 1; l <= N; l++)
+            for (int l = 1; l <= n; l++)
             {
-                for (int i = 1; i <= l; i++)
+                for (int j = 1; j <= l; j++)
                 {
-                    for (int j = 1; j <= N - i; j++)
-                    {
-                        Console.Write(" ");
-                    }
-
-                    for (int k = 1; k <= 1 + (i - 1) * 2; k++)
-                    {
-                        Console.Write("*");
-                    }
-                    Console.WriteLine();
+                    string s = new string('*', 1 + (j - 1) * 2);
+                    Console.WriteLine(s.PadLeft(n + j - 1));
                 }
+
             }
+        
             
 
             Console.ReadLine();
