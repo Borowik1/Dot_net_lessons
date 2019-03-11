@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ArrayGenerator;
 
 namespace Task02
 {
@@ -12,16 +13,15 @@ namespace Task02
         {
             int[,,] array2 = new int[10, 20, 30];
 
-            Random rnd = new Random();
+            ArrayGen.ArrayGenerator(array2, -20, 20);
 
-            for (int i = 0; i < array2.GetUpperBound(0); i++)
+            for (int i = 0; i < array2.GetLength(0); i++)
             {
-               for (int j = 0; j < array2.GetUpperBound(1); j++)
+               for (int j = 0; j < array2.GetLength(1); j++)
                 {
-                    for (int k = 0; k < array2.GetUpperBound(2); k++)
+                    for (int k = 0; k < array2.GetLength(2); k++)
                     {
-                        array2.SetValue(rnd.Next(-10, 10), i, j, k);
-
+                        
                         if (array2[i, j, k] > 0)
                         {
                             array2[i, j, k] = 0;
@@ -32,6 +32,7 @@ namespace Task02
 
             }
 
+            Console.WriteLine("Done!");
             Console.ReadKey();
         }   
 

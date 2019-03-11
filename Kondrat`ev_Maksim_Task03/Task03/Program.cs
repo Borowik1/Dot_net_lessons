@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ArrayGenerator;
 
 namespace Task03
 {
@@ -11,7 +12,9 @@ namespace Task03
         static void Main(string[] args)
         {
             int summ=0;
-            int[] array3 = { -3, 2, 4, -3, -8, 0, -5, 6, 9, 7};
+            int[] array3 = new int [20];
+
+            ArrayGen.ArrayGenerator(array3, -100, 100);
 
             foreach (int i in array3)
             {
@@ -20,6 +23,9 @@ namespace Task03
                     summ += i;
                 }
             }
+
+            ArrayGen.WriteArray(array3);
+
             Console.Write($"Сумма неотрицательных элементов массива: {summ}");
             Console.ReadLine();
         }
