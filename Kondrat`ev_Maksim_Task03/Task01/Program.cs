@@ -12,7 +12,7 @@ namespace Task01
 
         static void Main(string[] args)
         {
-            Random rnd = new Random();
+            
             int[] array1 = new int[100];
 
             ArrayGen.ArrayGenerator(array1, -100, 100);

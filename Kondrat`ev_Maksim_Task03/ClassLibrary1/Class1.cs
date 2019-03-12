@@ -46,6 +46,7 @@ namespace ArrayGenerator
 
             }
         }
+
         public static void WriteArray(int[] arr)
         {
             for (int i = 0; i < arr.GetLength(0); i++)
@@ -55,6 +56,7 @@ namespace ArrayGenerator
 
             Console.WriteLine();
         }
+
         public static void WriteArray(int[,] arr)
         {
             for (int i = 0; i < arr.GetLength(0); i++)

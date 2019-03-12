@@ -11,14 +11,14 @@ namespace Task03
     {
         static void Main(string[] args)
         {
-            int summ=0;
-            int[] array3 = new int [20];
+            int summ = 0;
+            int[] array3 = new int[20];
 
             ArrayGen.ArrayGenerator(array3, -100, 100);
 
             foreach (int i in array3)
             {
-                if(i > 0)
+                if (i > 0)
                 {
                     summ += i;
                 }

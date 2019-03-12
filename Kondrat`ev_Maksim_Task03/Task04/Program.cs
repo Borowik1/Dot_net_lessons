@@ -11,23 +11,23 @@ namespace Task04
     {
         static void Main(string[] args)
         {
-            int[,] array4 = new int[10,10];
+            int[,] array = new int[10,10];
             int summ = 0;
 
-            ArrayGen.ArrayGenerator(array4, -100, 100);
+            ArrayGen.ArrayGenerator(array, -100, 100);
 
-            for(int i = 0; i < array4.GetLength(0); i++)
+            for(int i = 0; i < array.GetLength(0); i++)
             {
-                for (int j = 0; j < array4.GetLength(1); j++)
+                for (int j = 0; j < array.GetLength(1); j++)
                 {
                     if ((i + j) % 2 == 0)
                     {
-                        summ += array4[i, j];
+                        summ += array[i, j];
                     }
                 }
             }
 
-            ArrayGen.WriteArray(array4);
+            ArrayGen.WriteArray(array);
 
             Console.WriteLine($"Сумма элементов, стоящих на чётных местах массива: {summ}");
             Console.Read();
