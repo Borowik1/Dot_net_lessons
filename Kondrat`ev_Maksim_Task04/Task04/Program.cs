@@ -11,10 +11,9 @@ namespace Task04
     {
         static void Main(string[] args)
         {
-            string str = "";
+            string str = "";            
             StringBuilder sb = new StringBuilder();
-            Stopwatch sw1 = new Stopwatch();
-            Stopwatch sw2 = new Stopwatch();
+            Stopwatch sw1 = new Stopwatch();            
             int N = 100;
 
             sw1.Start();
@@ -24,23 +23,27 @@ namespace Task04
             }
             sw1.Stop();
 
-            sw2.Start();
+            double time1 = sw1.Elapsed.TotalMilliseconds;
+            
+            sw1.Restart();
             for (int i = 0; i < N; i++)
             {
                 sb.Append("*");
             }
-            sw2.Stop();
+            sw1.Stop();
 
-            Console.WriteLine($"Время сборки строки суммированием: {sw1.Elapsed.TotalMilliseconds} мсек");
-            Console.WriteLine($"Время сборки строки Append: {sw2.Elapsed.TotalMilliseconds} мсек");
+            double time2 = sw1.Elapsed.TotalMilliseconds;
 
-            if (sw1.Elapsed.TotalMilliseconds < sw2.Elapsed.TotalMilliseconds)
+            Console.WriteLine($"Время сборки строки суммированием: {time1} мсек");
+            Console.WriteLine($"Время сборки строки Append: {time2} мсек");
+
+            if (time1 < time2)
             {
-                Console.WriteLine($"Суммирование быстрее на {sw2.Elapsed.TotalMilliseconds - sw1.Elapsed.TotalMilliseconds} мсек");
+                Console.WriteLine($"Суммирование быстрее на {time2 - time1} мсек");
             }
             else
             {
-                Console.WriteLine($"Append быстрее на {sw1.Elapsed.TotalMilliseconds - sw2.Elapsed.TotalMilliseconds} мсек");
+                Console.WriteLine($"Append быстрее на {time1 - time2} мсек");
             }
             Console.ReadLine();
 

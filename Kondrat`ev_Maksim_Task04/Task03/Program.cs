@@ -9,12 +9,35 @@ namespace Task03
 {
     class Program
     {
-        static public void CultCompare(string cult1, string cult2)
+        static void Main(string[] args)
         {
-            CultureInfo culInf1 = new CultureInfo(cult1);
-            CultureInfo culInf2 = new CultureInfo(cult2);
-            CultureInfo culInf3 = CultureInfo.InvariantCulture;
+            string cult1 = "ru-RU";
+            string cult2 = "en-US";
+            string cult3 = "";
+            CultComp(cult1, cult2);
+            CultComp(cult1, cult3);
+            CultComp(cult2, cult3);
+            Console.Read();
+        }
+
+        static void CultComp(string cult1, string cult2)
+        {
+            CultureInfo culInf1 = new CultureInfo(cult1);            
+            CultureInfo culInf2 = new CultureInfo(cult2);           
             StringBuilder line = new StringBuilder();
+
+            if (cult1 == "")
+            {
+                cult1 = "invariant";
+            }
+            else
+            {
+                if (cult2 == "")
+                {
+                    cult2 = "invariant";
+                }
+            }
+         
             line.Append('-', 65);
             Console.WriteLine($"|{line}|");
             Console.WriteLine("| {0,-20}| {1,-20}| {2,-20}|", "Свойство", $"{cult1}", $"{cult2}");
@@ -25,14 +48,6 @@ namespace Task03
             Console.WriteLine("| {0,-20}| {1,-20}| {2,-20}|", "DecimalSeparator", culInf1.NumberFormat.NumberDecimalSeparator, culInf2.NumberFormat.NumberDecimalSeparator);
             Console.WriteLine($"|{line}|");
             Console.WriteLine();
-
-        }
-
-
-        static void Main(string[] args)
-        {
-            CultCompare("ru-RU", "en-US");
-            Console.ReadKey();
-        }
+        }        
     }
 }

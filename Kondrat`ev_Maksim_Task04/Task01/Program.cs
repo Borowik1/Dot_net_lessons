@@ -13,9 +13,7 @@ namespace Task01
         {
             string str;
             string[] arr;
-            float summ = 0;
-            float average;
-
+            float summ = 0;        
 
             Console.WriteLine("Введите строку");
             str = Console.ReadLine();
@@ -26,7 +24,7 @@ namespace Task01
                 summ += i.Length;
             }
 
-            average = summ / arr.Length;
+            float average = summ / arr.Length;
 
             Console.WriteLine($"Средняя длинна слов в выражении {average}");
             Console.ReadKey();
