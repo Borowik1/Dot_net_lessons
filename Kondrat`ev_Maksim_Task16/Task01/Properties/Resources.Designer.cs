@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Entities.Properties
+namespace Task01.Properties
 {
 
 

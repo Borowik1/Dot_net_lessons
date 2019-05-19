@@ -19,8 +19,7 @@ namespace Task04
     }
     abstract class GameObject
     {
-        int x;
-        int y;
+        
     }
     abstract class StaticObject : GameObject
     {
@@ -58,5 +57,13 @@ namespace Task04
     internal interface IMovable
     {
         void Move();
+    }
+
+    class Wolf : Enemy
+    {
+    }
+
+    class Lion : Enemy
+    {
     }
 }

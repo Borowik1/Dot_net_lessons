@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Entities
 {
@@ -12,10 +15,6 @@ namespace Entities
         private List<Award> awards = new List<Award>();
         private int id;
 
-        public User()
-        {
-
-        }
         public User(int id, string firstName, string lastName, DateTime dateOfBirth, List<Award> aw)
         {
             this.FirstName = firstName;
@@ -28,22 +27,15 @@ namespace Entities
                 awards.Add(award);
             }
         }
+        public User()
+        {
+
+        }
         public string FirstName { get => firstName; set => firstName = value; }
         public string LastName { get => lastName; set => lastName = value; }
         public DateTime DateOfBirth { get => dateOfBirth; set => dateOfBirth = value; }
         public int Id { get => id; set => id = value; }
-        public List<Award> Awards
-        {
-            get => awards;
-            set
-            {
-                awards.Clear();
-                foreach (Award award in value)
-                {
-                    awards.Add(award);
-                }
-            }
-        }
+        public List<Award> Awards { get => awards; set => awards = value; }
         public int Age
         {
             get
@@ -60,6 +52,5 @@ namespace Entities
                 return age;
             }
         }
-
     }
 }

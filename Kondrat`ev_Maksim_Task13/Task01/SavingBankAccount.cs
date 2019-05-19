@@ -29,7 +29,6 @@ namespace Task01
             {
                 Console.WriteLine(e.Message);
             }
-
 		}
 
 		public override void Withdraw(decimal amount)
@@ -53,9 +52,8 @@ namespace Task01
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.Message); ;
-            }
-			
+                Console.WriteLine(e.Message);
+            }			
 		}
 
 		public override void GenerateAccountReport()

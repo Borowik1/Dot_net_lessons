@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Entities.Properties
+namespace UsersAwardsPL.Properties
 {
 
 
