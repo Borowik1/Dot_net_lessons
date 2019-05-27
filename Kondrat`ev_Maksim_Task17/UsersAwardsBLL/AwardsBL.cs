@@ -49,6 +49,18 @@ namespace UsersAwardsBLL
             awardsDAO.Remove(award);
         }
 
+        public void Remove(int id)
+        {
+            foreach(Award aw in awardsDAO.GetList())
+            {
+                if(id == aw.AwardId)
+                {
+                    awardsDAO.Remove(aw);
+                }
+            }
+        }
+
+
         public IEnumerable<Award> GetList()
         {
             return awardsDAO.GetList();
