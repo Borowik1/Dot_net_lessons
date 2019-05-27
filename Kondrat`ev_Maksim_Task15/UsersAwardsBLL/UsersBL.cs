@@ -64,13 +64,6 @@ namespace UsersAwardsBLL
                     select u).ToList();
         }
 
-        public void Add(string firstName, string lastName, DateTime dateOfBirth, List<Award> aw)
-        {
-            User user = new User(1, firstName, lastName, dateOfBirth, aw);
-
-            this.Add(user);
-        }
-
         public void Add(User user)
         {
             if (user == null) { throw new ArgumentException("user"); }

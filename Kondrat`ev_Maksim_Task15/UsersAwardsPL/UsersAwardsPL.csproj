@@ -72,6 +72,7 @@
     <Compile Include="UserForm.designer.cs">
       <DependentUpon>UserForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserViewModel.cs" />
     <EmbeddedResource Include="AwardForm.resx">
       <DependentUpon>AwardForm.cs</DependentUpon>
     </EmbeddedResource>

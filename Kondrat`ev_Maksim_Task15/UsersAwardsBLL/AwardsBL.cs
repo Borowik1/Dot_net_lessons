@@ -31,12 +31,6 @@ namespace UsersAwardsBLL
                     select a).ToList();
         }
 
-        public void Add(string awardName, string awardDesc)
-        {
-            Award award = new Award(1, awardName, awardDesc);
-            this.Add(award);
-        }
-
         public void Add(Award award)
         {
             if (award == null) { throw new ArgumentException("award"); }

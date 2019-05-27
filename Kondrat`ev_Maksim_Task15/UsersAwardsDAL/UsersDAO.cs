@@ -72,7 +72,6 @@ namespace UsersAwardsDAL
 
                     connection.Open();
                     command.ExecuteNonQuery();
-
                 }
             }
         }
