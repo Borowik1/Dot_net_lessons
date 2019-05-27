@@ -1,4 +1,5 @@
 ﻿using System;
+using Exceptions;
 
 namespace Task01
 {
@@ -24,7 +25,7 @@ namespace Task01
             {
                 if (AccountBalance - amount <= MinAccountBalance)
                 {
-                    throw new Exception("You can not withdraw amount from your Current Account as Minimum Balance limit is reached");
+                    throw new MinAccountBalanceException("You can not withdraw amount from your Current Account as Minimum Balance limit is reached");
                 }
 
                 AccountBalance = AccountBalance - amount;

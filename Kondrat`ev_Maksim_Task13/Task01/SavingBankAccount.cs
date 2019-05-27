@@ -1,4 +1,5 @@
 ﻿using System;
+using Exceptions;
 
 namespace Task01
 {
@@ -20,7 +21,7 @@ namespace Task01
             {
                 if (amount >= MaxDepositAmount)
                 {
-                    throw new Exception(string.Format("You can not deposit amount greater than {0}", MaxDepositAmount.ToString()));
+                    throw new MaxDepositException(string.Format("You can not deposit amount greater than {0}", MaxDepositAmount.ToString()));
                 }
                 AccountBalance = AccountBalance + amount;
                 TransactionSummary = string.Format("{0}\n Deposit:{1}", TransactionSummary, amount);
@@ -37,12 +38,12 @@ namespace Task01
             {
                 if (withdrawCount > 3)
                 {
-                    throw new Exception("You can not withdraw amount more than thrice");
+                    throw new MaxWithdrawCountException("You can not withdraw amount more than thrice");
                 }
 
                 if (AccountBalance - amount <= MinAccountBalance)
                 {
-                    throw new Exception("You can not withdraw amount from your Savings Account as Minimum Balance limit is reached");
+                    throw new MinAccountBalanceException("You can not withdraw amount from your Savings Account as Minimum Balance limit is reached");
                 }
 
                 AccountBalance = AccountBalance - amount;
