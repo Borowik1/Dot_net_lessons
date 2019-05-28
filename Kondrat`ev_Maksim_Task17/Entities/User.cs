@@ -29,7 +29,7 @@ namespace Entities
         }
         public User()
         {
-
+            Id = 0;
         }
         public string FirstName { get => firstName; set => firstName = value; }
         public string LastName { get => lastName; set => lastName = value; }
