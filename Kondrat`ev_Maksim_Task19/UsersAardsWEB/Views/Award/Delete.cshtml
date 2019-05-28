@@ -1,0 +1,39 @@
+﻿@model Entities.Award
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+
+<h3>Удалить награду?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Название
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AwardName)
+        </dd>
+
+        <dt>
+            Описание
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AwardDescription)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Удалить" class="btn btn-default" /> |
+            @Html.ActionLink("К списку наград", "Index")
+        </div>
+    }
+</div>

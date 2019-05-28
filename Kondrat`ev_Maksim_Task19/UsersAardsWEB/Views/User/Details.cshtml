@@ -1,0 +1,60 @@
+﻿@model Entities.User
+    @using Entities;
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Подробно</h2>
+
+<div>
+    <h4>о пользователе</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Фамилия
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            Имя
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+           Дата рождения
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOfBirth)
+        </dd>
+
+        <dt>
+            Возраст
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Age)
+        </dd>
+
+        <dt>
+            Список наград
+        </dt>
+        @foreach (Award aw in Model.Awards)
+        {
+        <dd>
+            @aw.AwardName
+        </dd>
+        }
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("К списку пользователей", "Index")
+</p>

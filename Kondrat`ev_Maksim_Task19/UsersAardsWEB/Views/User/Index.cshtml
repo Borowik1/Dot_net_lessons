@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Entities.User>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Список пользователей</h2>
+
+<p>
+    @Html.ActionLink("Добавить пользователя", "Edit", new { id = 0 })
+</p>
+<table class="table">
+    <tr>
+        <th>Фамилия</th>
+        <th>Имя</th>
+        <th>Год рождения</th>
+        <th>Возраст</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayName(item.DateOfBirth.ToShortDateString())
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Age)
+            </td>
+            <td>
+                @Html.ActionLink("Править", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Подробно", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Удалить", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>
